@@ -1,0 +1,12 @@
+jobs:
+  title: Scheduler jobs
+scheduler_files:
+  title: Task scheduler files
+schedulers:
+  title: Task scheduler tools
+sockets:
+  title: Sockets
+wx:
+  title: Processes with write and execute permisions in some memory addresses
+xid:
+  title: Processes which UIDs or GIDs are not the same

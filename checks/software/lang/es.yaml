@@ -1,0 +1,18 @@
+compilers:
+  title: Compiladores y decompiladores
+containers:
+  title: Programas de contenerización, orquestación y cloud disponibles
+keys:
+  title: Programas de claves disponibles
+network:
+  title: Programas de red disponibles
+others:
+  title: Otros programas interesantes disponibles
+programing:
+  title: Lenguajes de programación disponibles
+screen:
+  title: Sesiones de screen
+shells:
+  title: Shells disponibles
+tmux:
+  title: Sesiones de tmux

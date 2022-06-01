@@ -1,0 +1,18 @@
+hostnames:
+  title: Nombres de la máquina
+inetd:
+  title: Configuración de inetd
+interfactitle:
+  title: Interfaces de red
+ipv4:
+  title: Hosts IPv4
+ipv6:
+  title: Hosts IPv6
+neighbours:
+  title: Vecinos
+ports:
+  title: Puertos activos
+xinetd:
+  title: Configuración de xinetd
+xinetds:
+  title: Archivos xinetd

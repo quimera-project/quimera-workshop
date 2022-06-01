@@ -1,0 +1,45 @@
+statistics: Render("%s %s",  Red("▣"), Red(Stat))
+css: |
+    @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+    :root {
+        --main-color: #830f23;
+        --main-color-dark: #3b1d24;
+        --main-color-light: #a8424b;
+        --text-color: #e7dccd;
+        --body-background: #fdfafb;
+        --check-background: #fff;
+        --succeed: "🔻";
+        --failed: "🚧";
+        --border-radius: 8px;
+        --font: 'Fjalla One', sans-serif;
+    }
+markdown:
+    check:
+        info: Render("#### ℹ️ %s", Check.Info)
+        title:
+            failed: Render("## ☠️ [%s](%s)", Check.Title, Check.MarkdownLink)
+            ok: Render("## [%s](%s)", Check.Title, Check.MarkdownLink)
+    checkbox:
+        failed: Render("✖ ~~%s~~", Query.Markdown())
+        ok: Render("✔ %s", Query.Markdown())
+    pair: Render("**%s** %s %s", Pair.Key.Markdown(), "⬌", Pair.Value.Markdown())
+    question: Render("**%s**%s%s", Question.Query, Question.Union(" "), Question.Answer.Markdown())
+obsidian: ITS Theme
+render:
+    title:
+        left: Render("%s", Red("█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮"))
+        right: Render("%s", Red("▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▮█▌"))
+    check:
+        info: Render("%s %s", Bold(Blue("▱▱▱▱▱▱▱")), Bold(Blue(Check.Info)))
+        title:
+            failed: Render("%s %s", Bold(Red("▰▰▰▰▰▰▰")), Bold(Red(Check.Title)))
+            ok: Render("%s %s", Bold(Green("▰▰▰▰▰▰▰")), Bold(Green(Check.Title)))
+    checkbox:
+        failed: Render("%s %s", Red("✖"), Gray(Query.Render()))
+        ok: Render("%s %s", Green("✔"), Query.Render())
+    file:
+        call: Render("%s %s\n%s\n%s", Red("∎"), Magenta(Filename), Content, Red("▔"))
+        indent: Render("")
+        pad: Render("%s ", Red("┃"))
+    pair: Render("%s %s %s", Bold(Pair.Key.Render()), "⬌", Pair.Value.Render())
+    table: StyleColoredBlackOnRedWhite

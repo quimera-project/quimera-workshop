@@ -1,0 +1,15 @@
+cpu:
+  title: Información sobre la CPU
+df:
+  title: Cantidad de disco usada en el sistema
+dmesg:
+  title: Módulos de kernel instalados sin firmar
+info:
+  title: Información del sistema
+kernel:
+  title: Exploits del kernel
+path:
+  title: Variables del PATH
+  info: Posibles directorios con permisos de escritura
+protections:
+  title: Protecciones del sistema

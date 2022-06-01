@@ -1,0 +1,46 @@
+statistics: Render("%s %s",  Yellow("+"), Yellow(Stat))
+css: |
+    :root {
+        --main-color: #185d49;
+        --main-color-dark: #083b2d;
+        --main-color-light: #2c9477;
+        --text-color: #e7dccd;
+        --body-background: #f6fffb;
+        --check-background: #fff;
+        --succeed: "◥";
+        --failed: "✘";
+        --border-radius: 0px;
+        --font: Consolas,monaco,monospace; 
+    }
+markdown:
+    check:
+        info: Render("#### [i] %s", Check.Info)
+        title:
+            failed: Render("## [!] [%s](%s)", Check.Title, Check.MarkdownLink)
+            ok: Render("## [+] [%s](%s)", Check.Title, Check.MarkdownLink)
+    checkbox:
+        failed: Render("~~%s~~", Query.Markdown())
+        ok: Render("%s", Query.Markdown())
+    pair: Render("**%s** %s %s", Pair.Key.Markdown(), "--", Pair.Value.Markdown())
+obsidian: Darkyan
+render:
+    title:
+        down: Render("%s", Magenta("|"+ Repeat("-", 119+len(Title)) + "+"))
+        left: Render("%s", Magenta("||==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==("))
+        right: Render("%s", Magenta(")==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|==|=)"))
+        up: Render("%s", Magenta("|"+ Repeat("-", 119+len(Title)) + "+"))
+        centered: false
+    check:
+        info: Render("%s %s", Bold(Blue("[i]")), Bold(Blue(Check.Info)))
+        title:
+            failed: Render("%s %s", Bold(Red("[-]")), Bold(Red(Check.Title)))
+            ok: Render("%s %s", Bold(Green("[+]")), Bold(Green(Check.Title)))
+    checkbox:
+        failed: Render("%s%s%s %s", Gray("["), Red("x"), Gray("]"), Gray(Query.Render()))
+        ok: Render("%s%s%s %s", Gray("["), Green("v"), Gray("]"), Query.Render())
+    file:
+        call: Render("%s %s\n%s\n%s", Magenta("+--|"), Magenta(Filename), Content, Magenta("+"))
+        pad: Render("%s ", Magenta("|"))
+    pair: Render("%s %s %s", Bold(Pair.Key.Render()), "--", Pair.Value.Render())
+    question: Render("%s%s%s", Bold(Question.Query), Question.Union("."), Question.Answer.Render())
+    table: StyleDefault

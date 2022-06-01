@@ -1,0 +1,83 @@
+hostnames:
+    tools:
+    - jo
+    bin: hostnames.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+inetd:
+    tools:
+    - jo
+    bin: inetd.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+interfaces:
+    tools:
+    - jo
+    bin: interfaces.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+ipv4:
+    tools:
+    - jo
+    bin: ipv4.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+ipv6:
+    tools:
+    - jo
+    bin: ipv6.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+neighbours:
+    tools:
+    - jo
+    bin: neighbours.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+ports:
+    tools:
+    - jo
+    - jq
+    assets:
+    - network.json
+    bin: ports.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+xinetd:
+    tools:
+    - jo
+    bin: xinetd.sh
+    os:
+    - debian
+    priority: 1
+    type: single
+
+xinetds:
+    tools:
+    - jo
+    bin: xinetds.sh
+    os:
+    - debian
+    priority: 1
+    type: list

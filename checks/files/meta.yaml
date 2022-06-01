@@ -1,0 +1,37 @@
+sgid:
+    args: g
+    tools:
+    - jo
+    - jq
+    assets:
+    - files.json
+    bin: sxid.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+suid:
+    args: u
+    tools:
+    - jo
+    - jq
+    assets:
+    - files.json
+    bin: sxid.sh
+    os:
+    - debian
+    priority: 2
+    type: table
+
+writable:
+    tools:
+    - jo
+    - jq
+    assets:
+    - files.json
+    bin: writable.sh
+    os:
+    - debian
+    priority: 3
+    type: list

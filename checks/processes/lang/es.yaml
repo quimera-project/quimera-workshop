@@ -1,0 +1,12 @@
+jobs:
+  title: Tareas programadas
+scheduler_files:
+  title: Archivos de tareas programadas
+schedulers:
+  title: Herramientas de programación de tareas
+sockets:
+  title: Sockets
+wx:
+  title: Procesos con permisos de escritura y ejecución en algunas zonas de memoria
+xid:
+  title: Procesos cuyos UIDs o GIDs no son iguales

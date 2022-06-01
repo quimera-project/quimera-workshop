@@ -1,0 +1,63 @@
+cpu:
+    tools:
+    - jo
+    bin: cpu.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+df:
+    tools:
+    - jo
+    bin: df.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+dmesg:
+    tools:
+    - jo
+    bin: dmesg.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+info:
+    tools:
+    - jo
+    - jq
+    assets:
+    - system.json
+    bin: info.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+# kernel:
+#     bin: kernel.bin
+#     os:
+#     - debian
+#     priority: 1
+#     type: list
+
+path:
+    tools:
+    - jo
+    bin: path.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+protections:
+    tools:
+    - jo
+    bin: protections.sh
+    os:
+    - debian
+    priority: 1
+    type: list

@@ -1,0 +1,111 @@
+emojis:
+    dashboard: 🕹️
+    up: 🙋🏻‍♂️
+    containers: 🐳
+    default: 📌
+    files: 🗂️
+    network: 🛰️
+    processes: 📟
+    software: 🧪
+    system: 💻
+    users: 👥
+        
+css: |
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+    :root {
+        --main-color: #10255c;
+        --main-color-dark: rgb(20, 42, 95);
+        --main-color-light: #274592;
+        --text-color: #e7dccd;
+        --body-background: #f0f6ff;
+        --check-background: #fff;
+        --succeed: "👇";
+        --failed: "❌";
+        --border-radius: 10px;
+        --font: "Poppins", sans-serif;
+    }
+
+icons:
+    up:
+        dark: bx bxs-hand-up
+        light: bx bx-hand-up
+    dashboard:
+        dark: bx bxs-tachometer
+        light: bx bx-tachometer
+    containers:
+        dark: bx bxs-package
+        light: bx bx-package
+    default:
+        dark: bx bxs-map-pin
+        light: bx bx-map-pin
+    files:
+        dark: bx bxs-folder
+        light: bx bx-folder
+    network:
+        dark: bx bxs-server
+        light: bx bx-server
+    processes:
+        dark: bx bxs-terminal
+        light: bx bx-terminal
+    software:
+        dark: bx bxs-game
+        light: bx bx-game
+    system:
+        dark: bx bxs-chip
+        light: bx bx-chip
+    users:
+        dark: bx bxs-user
+        light: bx bx-user
+
+html:
+    checkbox:
+        failed: >
+            Render("<p><i class='bx bxs-message-square-check' style='color: #2c9477'></i> <span>%s</span></p>", Query)
+        ok: >
+            Render("<p><i class='bx bx-message-square-x' style='color: #ac0e35'></i> <span class='missing'>%s</span></p>", Query)
+    pair: >
+        Render("<p><strong class='key'>%s</strong> <i class='bx bx-minus'></i> <span class='value'>%s</span></p>", Key, Value)
+
+
+markdown:
+    check:
+        info: Render("#### ℹ️ %s", Check.Info)
+        title:
+            failed: Render("## ⚠️ [%s](%s)", Check.Title, Check.MarkdownLink)
+            ok: Render("## [%s](%s)", Check.Title, Check.MarkdownLink)
+    checkbox:
+        failed: Render("❌ ~~%s~~", Query.Markdown())
+        ok: Render("✅ %s", Query.Markdown())
+    file:
+        call: Render("%s %s\n%s\n%s", "📄", Magenta(Filename), Content, Magenta("▔"))
+        indent: Render("")
+        pad: Render("%s ", Magenta("┃"))
+    pair: Render("**%s** %s %s", Pair.Key.Markdown(), "━", Pair.Value.Markdown())
+    question: Render("**%s** %s", Question.Query, Question.Answer.Markdown())
+
+obsidian: Deep Work
+
+render:
+    title:
+        centered: true
+        left: Render("%s", Magenta("▐≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎"))
+        right: Render("%s", Magenta("≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎≎▐"))
+    check:
+        info: Render("%s %s", Bold(Blue("▬")), Bold(Blue(Check.Info)))
+        title:
+            failed: Render("%s %s", Bold(Red("◥")), Bold(Red(Check.Title)))
+            ok: Render("%s %s", Bold(Green("◢")), Bold(Green(Check.Title)))
+    checkbox:
+        failed: Render("%s %s", Red("⭔"), Gray(Query.Render()))
+        ok: Render("%s %s",  Green("⭓"), Query.Render())
+    file:
+        call: Render("%s %s\n%s\n%s", Magenta("█"), Magenta(Filename), Content, Magenta("▔"))
+        indent: Render("")
+        pad: Render("%s ", Magenta("┃"))
+    pair: Render("%s %s %s", Bold(Pair.Key.Render()), Magenta("┅"), Pair.Value.Render())
+    question: Render("%s%s%s", Bold(Question.Query), Question.Union(" "), Question.Answer.Render())
+    raw: Render(Output.Render())
+    separator: Render("")
+    table: StyleRounded
+
+statistics: Render("%s %s",  Yellow("◐"), Yellow(Stat))

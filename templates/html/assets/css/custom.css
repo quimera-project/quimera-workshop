@@ -1,0 +1,274 @@
+/*===== INLINE =====*/
+
+.inline {
+    display: inline !important;
+    margin: 8px;
+}
+
+
+/*===== UNIT =====*/
+
+.critical {
+    color: #ee1c51;
+    background-color: #eec318a4;
+    padding: 2px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.high {
+    color: #ee1c51;
+    font-weight: bold;
+}
+
+.medium {
+    color: #eec318;
+    font-weight: bold;
+}
+
+.info {
+    color: #1941a7;
+    font-weight: bold;
+}
+
+.missing {
+    color: #a1a1a1;
+}
+
+
+/*===== SUCCESS =====*/
+
+.succeed:before {
+    color: var(--main-color);
+    content: var(--succeed);
+}
+
+.failed:before {
+    color: #ac0e35;
+    content: var(--failed);
+}
+
+
+/*===== HEAD =====*/
+
+.head {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.head.active {
+    display: block;
+}
+
+.head .name {
+    font-size: xx-large;
+    margin-bottom: 50px;
+}
+
+.head .name span {
+    padding-top: 2.5px;
+    font-size: xx-large;
+    float: left;
+    margin-right: 10px;
+}
+
+
+/*===== CHECK =====*/
+
+.check {
+    background-color: var(--check-background);
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-bottom: 35px;
+    width: 100%;
+    overflow-x: auto;
+    min-height: min-content;
+    /* needs vendor prefixes */
+}
+
+.check .title {
+    cursor: pointer;
+}
+
+.check .title h2 {
+    margin-left: 40px;
+}
+
+.check .title span {
+    font-size: x-large;
+    float: left;
+    transition: 0.4s;
+}
+
+.check .title span.rotate {
+    transform: rotate(-90deg);
+}
+
+.check hr {
+    border: none;
+    background-color: rgb(233, 233, 233);
+    height: 1.5px;
+    margin-bottom: 10px;
+}
+
+.check .wrapper {
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.check .wrapper .content {
+    padding: 5px 10px;
+}
+
+
+/*===== TABLE =====*/
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/*===== LIST =====*/
+
+.check li {
+    margin-bottom: 10px;
+}
+
+
+/*===== FIELDSET =====*/
+
+.fieldset {
+    margin-bottom: 40px;
+    color: var(--main-color);
+    font-weight: bold;
+    padding: 0 20px 20px 20px;
+    background-color: var(--body-background);
+    border-color: var(--main-color);
+    border-radius: 7px;
+}
+
+.fieldset h4 {
+    padding: 12px 0;
+}
+
+
+/*===== UP =====*/
+
+#up {
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--main-color);
+    color: var(--body-background);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+#up:hover {
+    background-color: var(--text-color);
+}
+
+
+/*===== STATISTICS =====*/
+
+canvas {
+    margin: 0 auto;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    padding: 12px;
+}
+
+.col-50 {
+    float: left;
+    width: 50%;
+    padding: 12px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    padding: 12px;
+}
+
+.col-100 {
+    float: left;
+    width: 100%;
+    padding: 12px;
+}
+
+.row {
+    margin: 0 -5px;
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 900px) {
+    .col-25,
+    .col-50,
+    .col-75 {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+.card {
+    border-radius: var(--border-radius);
+    background-color: var(--check-background);
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    padding: 16px;
+    text-align: center;
+}

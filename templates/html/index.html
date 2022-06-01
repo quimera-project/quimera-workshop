@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quimera</title>
+    <link rel="shortcut icon" href="assets/img/quimera.png" type="image/x-icon">
+    <link rel='stylesheet' href='assets/fonts/boxicons.css'>
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+    <nav>
+        <div class="sidebar-top">
+            <span class="shrink-btn">
+        <i class='bx bx-chevron-left'></i>
+      </span>
+            <img src="assets/img/quimera.png" class="logo" alt="">
+            <h3 class="hide">Quimera</h3>
+        </div>
+
+        <div class="search">
+            <i class='bx bx-search'></i>
+            <input type="text" class="hide" placeholder="Quick Search ...">
+        </div>
+
+        <div class="sidebar-links">
+            <ul>
+                <div class="active-tab"></div>
+                <li class="tooltip-element" data-tooltip="0">
+                    <a href="#" class="panel-button active" data-active="0">
+                        <div class="icon">
+                            <i class="bx bx-tachometer"></i>
+                            <i class="bx bxs-tachometer"></i>
+                        </div>
+                        <span class="link hide">Dashboard</span>
+                    </a>
+                </li>
+                <div class="tooltip">
+                    <span class="show">Dashboard</span>
+                </div>
+            </ul>
+
+            <h4 class="hide">Heads</h4>
+
+            <ul>
+                {{range $i, $category := .}}
+                <li class="tooltip-element" data-tooltip="{{$i}}">
+                    <a href="#" class="panel-button" data-active="{{$i|inc}}">
+                        <div class="icon">
+                            {{with $icon := $category|getIcon}}
+                            <i class="{{$icon.Light}}"></i>
+                            <i class="{{$icon.Dark}}"></i> {{ end }}
+                        </div>
+                        <span class="link hide">{{$category|getTitle}}</span>
+                    </a>
+                </li>
+                {{ end }}
+                <div class="tooltip">
+                    {{range .}}
+                    <span class="show">{{.|getTitle}}</span> {{ end }}
+                </div>
+            </ul>
+        </div>
+
+        <div class="sidebar-footer">
+            <a href="#" class="account tooltip-element" data-tooltip="0">
+                <i class='bx bx-info'></i>
+            </a>
+            <div class="admin-user tooltip-element" data-tooltip="1">
+                <div class="admin-profile hide">
+                    <!-- <img src="assets/img/github.png" alt="github" width="50"> -->
+                    <div class="admin-info">
+                        <!-- <h3>Quimera </h3>
+                        <h5>v1.0.0</h5> -->
+                        <small>v1.0.0</small>
+                    </div>
+                </div>
+                <!-- <a href="#" class="log-out">
+                    <i class='bx bx-donate-heart'></i>
+                </a> -->
+            </div>
+            <div class="tooltip">
+                <span class="show">GitHub</span>
+                <span>Donate</span>
+            </div>
+        </div>
+    </nav>
+
+
+    <main>
+        {{with $icon := getIcon "up"}}
+        <button onclick="goTop()" id="up"><i class='{{$icon.Dark}} inline'></i></button> {{ end }}
+        <article class="active" id="dashboard">
+            <div class="name mb-5">
+                {{with $icon := getIcon "dashboard"}}
+                <i class='{{$icon.Dark}} inline'></i> {{ end }}
+                <h3 class="inline">Dashboard</h3>
+            </div>
+            <div class="statistics">
+                {{with $stats := getStats}}
+                <div class="row">
+                    <div class="col-25">
+                        <div class="card">
+                            <h3>ID</h3>
+                            <p>{{$stats.Id}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-25">
+                        <div class="card">
+                            <h3>User</h3>
+                            <p>{{$stats.User}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-25">
+                        <div class="card">
+                            <h3>Duration</h3>
+                            <p>{{getTime}}</p>
+                        </div>
+                    </div>
+
+                    <div class="col-25">
+                        <div class="card">
+                            <h3>Date</h3>
+                            <p>{{getDate}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-50">
+                        <div class="card">
+                            <h3>Total checks</h3>
+                            <div class="canvas">
+                                <canvas id="total" style="width:100%; max-width:350px; height: 100%; max-height: 350px;"></canvas>
+                            </div>
+                            <div class="stat" name="failed" style="display: none;">{{$stats.Failed}}</div>
+                            <div class="stat" name="succeed" style="display: none;">{{getSucceed}}</div>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="row">
+                            <div class="col-50">
+                                <div class="card">
+                                    <h3>OS</h3>
+                                    <p>{{$stats.Os}}</p>
+                                </div>
+                            </div>
+                            <div class="col-50">
+                                <div class="card">
+                                    <h3>Arch</h3>
+                                    <p>{{$stats.Arch}}</p>
+                                </div>
+                            </div>
+                            <div class="col-100">
+                                <div class="card">
+                                    <h3>Categories</h3>
+                                    <div class="canvas">
+                                        <canvas id="categories" style="width:100%; max-width:400px; height: 100%; max-height: 400px;"></canvas>
+                                    </div>
+                                    {{range $key, $value := getCategories}}
+                                    <div class="category" name="{{$key}}" style="display: none;">{{$value}}</div>
+                                    {{end}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </article>
+
+        {{range .}}
+        <article id="{{.}}">
+            <div class="name">
+                {{with $icon := .|getIcon}}
+                <i class='{{$icon.Dark}} inline'></i> {{ end }}
+                <h3 class="inline">{{.|getTitle}} checks</h3>
+            </div>
+            <div class="checks">
+                {{range .|getChecks}}
+                <div class="check" name="{{.Title}}" type="{{.Type}}">
+                    <div class="title">
+                        {{if .Failed}}
+                        <span class="failed"></span> {{else}}
+                        <span class="succeed"></span> {{ end }}
+                        <h2>{{.Title}}</h2>
+                    </div>
+                    {{if not .Failed}}
+                    <hr />
+                    <div class="wrapper">
+                        <div class="content">
+                            {{.Structure.Html}}
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </article>
+        {{ end }}
+    </main>
+
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

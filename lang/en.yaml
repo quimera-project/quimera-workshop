@@ -1,0 +1,9 @@
+help: aaaaaaa
+
+fuzz:
+  is-binary: Render("🚧 \"%s\" is a binary file (Try option -O to download it)", Title)
+  no-matches: Render("Couldn't find any check that matches \"%s\"", Query)
+  number: Render("%s", Cyan("\n Number"))
+  question: Render("%s", Cyan("\n📂 What do you mean?"))
+  call: Render("%s %s\n%s\n%s", "📄", Magenta(Filename), Content, Magenta("▔"))
+  wrong: Render("Wrong number %d", Number)

@@ -1,0 +1,6 @@
+sgid:
+  title: SGID files
+suid:
+  title: SUID files
+writable:
+  title: Critical writable directories or files

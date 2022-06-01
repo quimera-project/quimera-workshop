@@ -1,0 +1,6 @@
+sgid:
+  title: Archivos con permisos SGID
+suid:
+  title: Archivos con permisos SUID
+writable:
+  title: Archivos y directorios críticos con permisos de escritura

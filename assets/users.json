@@ -1,0 +1,16 @@
+{
+    "groups": [
+        { "name": "adm", "level": "high" },
+        { "name": "admin", "level": "high" },
+        { "name": "auth", "level": "high" },
+        { "name": "root", "level": "high" },
+        { "name": "shadow", "level": "high" },
+        { "name": "video", "level": "high" },
+        { "name": "wheel", "level": "high" },
+        { "name": "disk", "level": "critical" },
+        { "name": "docker", "level": "critical" },
+        { "name": "lxc", "level": "critical" },
+        { "name": "lxd", "level": "critical" },
+        { "name": "sudo", "level": "critical" }
+    ]
+}

@@ -1,0 +1,51 @@
+jobs:
+    tools:
+    - jo
+    bin: jobs.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+scheduler_files:
+    tools:
+    - jo
+    bin: scheduler_files.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+schedulers:
+    tools:
+    - jo
+    bin: schedulers.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+sockets:
+    tools:
+    - jo
+    bin: sockets.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+wx:
+    bin: wxmap
+    os:
+    - debian
+    priority: 1
+    type: table
+
+xid:
+    tools:
+    - jo
+    bin: xid.sh
+    os:
+    - debian
+    priority: 1
+    type: table

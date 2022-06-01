@@ -1,0 +1,88 @@
+compilers:
+    tools:
+    - jo
+    bin: compilers.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+containers:
+    args: docker kubectl aws podman runc rkt ctr
+    tools:
+    - jo
+    bin: check.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+keys:
+    args: gpg netpgpkeys netpgp openssl keybase
+    tools:
+    - jo
+    bin: check.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+network:
+    args: nmap curl wget ping telnet nc netcat ncat nc.traditional
+    tools:
+    - jo
+    bin: check.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+others:
+    args: make gdb base64 socat xterm doas sudo fetch authbind
+    tools:
+    - jo
+    bin: check.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+programing:
+    args: gcc go g++ java perl php python python2 python3 R ruby rustc
+    tools:
+    - jo
+    assets:
+    - kernels.json
+    bin: check.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+screen:
+    tools:
+    - jo
+    bin: screen.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+shells:
+    args: sh ash bash dash ksh csh tcsh zsh rc
+    tools:
+    - jo
+    bin: check.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+tmux:
+    tools:
+    - jo
+    bin: tmux.sh
+    os:
+    - debian
+    priority: 1
+    type: list

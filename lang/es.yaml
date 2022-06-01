@@ -1,0 +1,8 @@
+help: aa
+
+fuzz:
+  is-binary: Render("🚧 \"%s\"  es un archivo binario (Prueba a descargarlo con la opción -O)", Title)
+  no-matches: Render("No se pudo encontrar ningún check que satisfaga la búsqueda \"%s\"", Query)
+  number: Render("%s", Cyan("Número"))
+  question: Render("%s", Cyan("📂 ¿A qué te refieres?"))
+  wrong: Render("Número erróneo %d", Number)

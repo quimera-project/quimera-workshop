@@ -1,0 +1,83 @@
+all:
+    tools:
+    - jo
+    - jq
+    assets:
+    - users.json
+    bin: all
+    os:
+    - debian
+    priority: 1
+    type: table
+
+console:
+    tools:
+    - jo
+    bin: console.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+current:
+    tools:
+    - jo
+    bin: current.sh
+    os:
+    - debian
+    priority: 1
+    type: single
+
+last:
+    tools:
+    - jo
+    bin: last.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+last_logon:
+    tools:
+    - jo
+    bin: last_logon.sh
+    os:
+    - debian
+    priority: 1
+    type: table
+
+pass_policy:
+    tools:
+    - jo
+    bin: pass_policy.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+pgp:
+    tools:
+    - jo
+    bin: pgp.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+sudo_tokens:
+    tools:
+    - jo
+    bin: sudo_tokens.sh
+    os:
+    - debian
+    priority: 1
+    type: list
+
+superusers:
+    tools:
+    - jo
+    bin: superusers.sh
+    os:
+    - debian
+    priority: 1
+    type: table

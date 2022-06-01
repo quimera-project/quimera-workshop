@@ -1,0 +1,21 @@
+all:
+  title: Todos los usuarios
+console:
+  title: Usuarios con consola
+  info: Es interesante observar las shells no previstas
+current:
+  title: Usuarios actualmente logueados
+last:
+  title: Últimos usuarios logueados
+last_logon:
+  title: Último inicio de sesión de los usuarios
+pass_policy:
+  title: Política de contraseñas
+pgp:
+  title: Software PGP instalado y llaves PGP
+  info: Posibles claves de usuario
+sudo_tokens:
+  title: Tokens sudo
+  info: 'https://github.com/nongiach/sudo_inject'
+superusers:
+  title: Superusuarios

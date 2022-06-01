@@ -1,0 +1,18 @@
+hostnames:
+  title: Hostnames
+inetd:
+  title: Inetd configuration
+interfaces:
+  title: Interfaces
+ipv4:
+  title: IPv4 hosts
+ipv6:
+  title: IPv6 hosts
+neighbours:
+  title: Neighbours
+ports:
+  title: Active ports
+xinetd:
+  title: Xinetd configuration
+xinetds:
+  title: Xinetd files

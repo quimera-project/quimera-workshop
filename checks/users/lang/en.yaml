@@ -1,0 +1,21 @@
+all:
+  title: All users
+console:
+  title: Users with a console
+  info: Look for unexpected shells
+current:
+  title: Current logged users
+last:
+  title: Last logged users
+last_logon:
+  title: Users last logon
+pass_policy:
+  title: Password policy
+pgp:
+  title: PGP instaled software and keys
+  info: Maybe there are some user keys messing around
+sudo_tokens:
+  title: Sudo tokens
+  info: 'https://github.com/nongiach/sudo_inject'
+superusers:
+  title: Superusers

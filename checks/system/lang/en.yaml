@@ -1,0 +1,15 @@
+cpu:
+  title: CPU information
+df:
+  title: File system disk usage
+dmesg:
+  title: Not signed installed kernel modules
+info:
+  title: System information
+kernel:
+  title: Kernel exploits
+path:
+  title: PATH variables
+  info: Writables directories
+protections:
+  title: System protections
