@@ -1,4 +1,4 @@
-# 💻 CPU information
+# 💻 Información sobre la CPU
 
 ## Valor devuelto
 Se devuelve una lista con pares clave-valor de diferentes características de la CPU.

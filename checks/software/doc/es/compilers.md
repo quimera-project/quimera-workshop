@@ -1,4 +1,4 @@
-# 🧪 Compilers and decompilers
+# 🧪 Compiladores y decompiladores
 
 ## Valor devuelto
 Se devuelve una tabla con los compiladores y decompiladores instalados en el sistema.

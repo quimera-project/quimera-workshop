@@ -1,4 +1,4 @@
-# 🛰️ Xinetd files
+# 🛰️ Archivos xinetd
 
 ## Valor devuelto
 Se devuelve una lista con los contenidos de los archivos que contiene el directorio */etc/xinetd.d/*.

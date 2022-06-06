@@ -1,4 +1,4 @@
-# 🧪 Tmux sessions
+# 🧪 Sesiones de tmux
 
 ## Valor devuelto
 Se devuelve una lista de pares clave-valor con las diferentes sesiones abiertas de tmux.

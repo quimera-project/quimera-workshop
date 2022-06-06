@@ -1,4 +1,4 @@
-# 🛰️ Xinetd configuration
+# 🛰️ Configuración de xinetd
 
 ## Valor devuelto
 Se devuelve los contenidos del archivo */etc/xinetd.conf*.

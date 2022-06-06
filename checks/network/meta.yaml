@@ -3,8 +3,11 @@ hostnames:
     - jo
     bin: hostnames.sh
     os:
-    - debian
+    - kali
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 inetd:
@@ -12,8 +15,11 @@ inetd:
     - jo
     bin: inetd.sh
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 1
+    tags:
+    - configs
     type: table
 
 interfaces:
@@ -21,8 +27,11 @@ interfaces:
     - jo
     bin: interfaces.sh
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 1
+    tags:
+    - info
     type: table
 
 ipv4:
@@ -30,8 +39,13 @@ ipv4:
     - jo
     bin: ipv4.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - configs
     type: table
 
 ipv6:
@@ -39,8 +53,13 @@ ipv6:
     - jo
     bin: ipv6.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - configs
     type: table
 
 neighbours:
@@ -48,8 +67,12 @@ neighbours:
     - jo
     bin: neighbours.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 ports:
@@ -60,8 +83,12 @@ ports:
     - network.json
     bin: ports.sh
     os:
-    - debian
+    - kali
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - exploitable
     type: table
 
 xinetd:
@@ -69,8 +96,12 @@ xinetd:
     - jo
     bin: xinetd.sh
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 1
+    tags:
+    - info
+    - configs
     type: single
 
 xinetds:
@@ -78,6 +109,10 @@ xinetds:
     - jo
     bin: xinetds.sh
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 1
+    tags:
+    - info
+    - configs
     type: list

@@ -1,4 +1,4 @@
-# 🛰️ Active ports
+# 🛰️ Puertos activos
 
 ## Valor devuelto
 Se devuelve una tabla con los diferentes puertos abiertos del sistema.

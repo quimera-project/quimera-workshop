@@ -1,4 +1,4 @@
-# 🧪 Available programing languages
+# 🧪 Lenguajes de programación disponibles
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintos lenguajes de programación instalados que pueden ser interesantes para un atacante.

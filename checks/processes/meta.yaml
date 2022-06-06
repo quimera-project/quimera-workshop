@@ -3,8 +3,14 @@ jobs:
     - jo
     bin: jobs.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - configs
+    - top
     type: list
 
 scheduler_files:
@@ -12,8 +18,13 @@ scheduler_files:
     - jo
     bin: scheduler_files.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - configs
     type: table
 
 schedulers:
@@ -21,8 +32,13 @@ schedulers:
     - jo
     bin: schedulers.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - configs
     type: list
 
 sockets:
@@ -30,15 +46,22 @@ sockets:
     - jo
     bin: sockets.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 wx:
     bin: wxmap
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 1
+    tags:
+    - exploitable
     type: table
 
 xid:
@@ -46,6 +69,10 @@ xid:
     - jo
     bin: xid.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - exploitable
     type: table

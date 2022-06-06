@@ -1,4 +1,4 @@
-# 💻 File system disk usage
+# 💻 Cantidad de disco usada en el sistema
 
 ## Valor devuelto
 Se devuelve una tabla con información del espacio usado en el sistema.
@@ -14,7 +14,7 @@ Se devuelve una tabla con información del espacio usado en el sistema.
 La información se obtiene del comando `df`.
 
 ## ¿De qué sirve esta información para escalar privilegios?
-Es interesante conocer la cantidad de espacio usado y disponible. Puede dar pistas de cúanta información contiene el sistema.
+Es interesante conocer la cantidad de espacio usado y disponible. Puede dar pistas de cuanta información contiene el sistema.
 
 ## Referencias
 - [Manual](https://www.man7.org/linux/man-pages/man1/df.1.html)

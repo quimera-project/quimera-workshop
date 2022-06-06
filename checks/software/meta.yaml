@@ -3,8 +3,10 @@ compilers:
     - jo
     bin: compilers.sh
     os:
-    - debian
+    - kali
     priority: 1
+    tags:
+    - info
     type: table
 
 containers:
@@ -13,8 +15,12 @@ containers:
     - jo
     bin: check.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 keys:
@@ -23,8 +29,12 @@ keys:
     - jo
     bin: check.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 network:
@@ -33,8 +43,12 @@ network:
     - jo
     bin: check.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 others:
@@ -43,8 +57,12 @@ others:
     - jo
     bin: check.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 programing:
@@ -55,8 +73,12 @@ programing:
     - kernels.json
     bin: check.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 screen:
@@ -64,8 +86,13 @@ screen:
     - jo
     bin: screen.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - exploitable
     type: list
 
 shells:
@@ -74,8 +101,12 @@ shells:
     - jo
     bin: check.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: list
 
 tmux:
@@ -83,6 +114,11 @@ tmux:
     - jo
     bin: tmux.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - exploitable
     type: list

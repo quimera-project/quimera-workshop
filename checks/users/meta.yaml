@@ -6,8 +6,10 @@ all:
     - users.json
     bin: all
     os:
-    - debian
+    - kali
     priority: 1
+    tags:
+    - info
     type: table
 
 console:
@@ -15,8 +17,12 @@ console:
     - jo
     bin: console.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 current:
@@ -24,8 +30,12 @@ current:
     - jo
     bin: current.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: single
 
 last:
@@ -33,8 +43,11 @@ last:
     - jo
     bin: last.sh
     os:
-    - debian
+    - kali
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 last_logon:
@@ -42,8 +55,11 @@ last_logon:
     - jo
     bin: last_logon.sh
     os:
-    - debian
+    - kali
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 pass_policy:
@@ -51,33 +67,42 @@ pass_policy:
     - jo
     bin: pass_policy.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - configs
     type: list
 
-pgp:
-    tools:
-    - jo
-    bin: pgp.sh
-    os:
-    - debian
-    priority: 1
-    type: list
+# pgp:
+#     tools:
+#     - jo
+#     bin: pgp.sh
+#     os:
+#     - kali
+#     priority: 1
+#     type: list
 
-sudo_tokens:
-    tools:
-    - jo
-    bin: sudo_tokens.sh
-    os:
-    - debian
-    priority: 1
-    type: list
+# sudo_tokens:
+#     tools:
+#     - jo
+#     bin: sudo_tokens.sh
+#     os:
+#     - kali
+#     - endeavouros
+#     priority: 1
+#     type: list
 
 superusers:
     tools:
     - jo
     bin: superusers.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table

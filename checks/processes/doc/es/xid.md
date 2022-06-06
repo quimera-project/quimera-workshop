@@ -1,4 +1,4 @@
-# 📟 Processes which UIDs or GIDs are not the same
+# 📟 Procesos cuyos UIDs o GIDs no son iguales
 
 ## Valor devuelto
 Se devuelve una tabla con aquellos procesos en los que algunos de los siguientes IDs sea distinto:

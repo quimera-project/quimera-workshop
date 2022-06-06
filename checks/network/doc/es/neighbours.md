@@ -1,4 +1,4 @@
-# 🛰️ IPv6 hosts
+# 🛰️ Vecinos
 
 ## Valor devuelto
 Se devuelve una tabla con las diferentes rutas IP.

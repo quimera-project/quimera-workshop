@@ -1,4 +1,4 @@
-# 💻 System information
+# 💻 Información del sistema
 
 ## Valor devuelto
 Se devuelve una lista con pares clave-valor de diferentes características del sistema.

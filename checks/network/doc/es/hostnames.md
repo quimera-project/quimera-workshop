@@ -1,4 +1,4 @@
-# 🛰️ Active ports
+# 🛰️ Nombres de la máquina
 
 ## Valor devuelto
 Se devuelve una lista con pares clave-valor con los nombres del host en la red.

@@ -1,4 +1,4 @@
-# 🛰️ IPv6 hosts
+# 🛰️ Hosts IPv6
 
 ## Valor devuelto
 Se devuelve una tabla con las diferentes IPs versión 6 y sus correspondientes alias.

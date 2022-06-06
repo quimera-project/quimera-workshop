@@ -1,4 +1,4 @@
-# 💻 PATH
+# 💻 Variables del PATH
 
 ## Valor devuelto
 Se devuelve una tabla con los diferentes directorios del PATH del usuario.
@@ -12,7 +12,7 @@ Se devuelve una tabla con los diferentes directorios del PATH del usuario.
 La información se obtiene de la variable `PATH`.
 
 ## ¿De qué sirve esta información para escalar privilegios?
-Si algún directorio de los que se encuentran el la variable PATH tiene permisos de escritura, un atacante podría aprovecharse para intentar inyectar librerías y/o binarios mailiciosos.
+Si algún directorio de los que se encuentran el la variable PATH tiene permisos de escritura, un atacante podría aprovecharse para intentar inyectar librerías y/o binarios maliciosos.
 
 ## Referencias
 - [HackingArticles](https://www.hackingarticles.in/linux-privilege-escalation-using-path-variable/)

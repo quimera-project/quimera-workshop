@@ -1,4 +1,4 @@
-# 🧪 Other interesting available programs
+# 🧪 Otros programas interesantes disponibles
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintos programas instalados que pueden ser interesantes para un atacante.

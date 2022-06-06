@@ -1,7 +1,7 @@
-# 🗂️ Critical writable directories or files
+# 🗂️ Archivos y directorios críticos con permisos de escritura
 
-## Valor devuelto
-Se devuelve una lista con pares clave-valor con el archivo o directorio con permisos de escritura y la descripción para escalar privilegios.
+## Return Value
+A list of key-value pairs with the file or directory with write permissions and the description for escalating privileges is returned.
 
-## ¿De qué sirve esta información para escalar privilegios?
-Algunos de estos archivos o directorios son críticos si contienen permisos de escritura. Un atacante podría utilizarlos para escribir en cada uno el payload correspondiente y poder elevar privilegios.
+## What use is this information to escalate privileges?
+Some of these files or directories are critical if they contain write permissions. An attacker could use them to write the corresponding payload in each one and be able to elevate privileges.

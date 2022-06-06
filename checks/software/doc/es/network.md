@@ -1,4 +1,4 @@
-# 🧪 Available network programs
+# 🧪 Programas de red disponibles
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintos programas instalados relacionados con la red que pueden ser interesantes para un atacante.

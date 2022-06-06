@@ -1,4 +1,4 @@
-# 📟 Scheduler jobs
+# 📟 Tareas programadas
 
 ## Valor devuelto
 Se devuelve una lista con los contenidos de los archivos con tareas programadas.

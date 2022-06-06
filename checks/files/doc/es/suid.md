@@ -1,4 +1,4 @@
-# 🗂️ SUID files
+# 🗂️ Archivos con permisos SUID
 
 ## Valor devuelto
 Se devuelve una tabla con los diferentes archivos del sistema que contienen el permiso SUID.

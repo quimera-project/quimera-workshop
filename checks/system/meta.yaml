@@ -3,8 +3,10 @@ cpu:
     - jo
     bin: cpu.sh
     os:
-    - debian
+    - kali
     priority: 1
+    tags:
+    - info
     type: list
 
 df:
@@ -12,8 +14,12 @@ df:
     - jo
     bin: df.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 dmesg:
@@ -21,8 +27,10 @@ dmesg:
     - jo
     bin: dmesg.sh
     os:
-    - debian
+    - kali
     priority: 1
+    tags:
+    - info
     type: table
 
 info:
@@ -33,14 +41,20 @@ info:
     - system.json
     bin: info.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
+    - exploitable
+    - top
     type: list
 
 # kernel:
 #     bin: kernel.bin
 #     os:
-#     - debian
+#     - kali
 #     priority: 1
 #     type: list
 
@@ -49,8 +63,12 @@ path:
     - jo
     bin: path.sh
     os:
-    - debian
+    - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
+    tags:
+    - info
     type: table
 
 protections:
@@ -58,6 +76,8 @@ protections:
     - jo
     bin: protections.sh
     os:
-    - debian
+    - kali
     priority: 1
+    tags:
+    - info
     type: list

@@ -1,4 +1,4 @@
-# 👥 Last logged users
+# 👥 Superusuarios
 
 ## Valor devuelto
 Se devuelve una tabla con los usuarios que contengan privilegios de root.

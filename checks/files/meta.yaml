@@ -7,8 +7,11 @@ sgid:
     - files.json
     bin: sxid.sh
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 1
+    tags:
+    - exploitable
     type: table
 
 suid:
@@ -20,8 +23,12 @@ suid:
     - files.json
     bin: sxid.sh
     os:
-    - debian
+    - kali
+    - endeavouros
     priority: 2
+    tags:
+    - exploitable
+    - top
     type: table
 
 writable:
@@ -32,6 +39,8 @@ writable:
     - files.json
     bin: writable.sh
     os:
-    - debian
+    - kali
     priority: 3
+    tags:
+    - exploitable
     type: list

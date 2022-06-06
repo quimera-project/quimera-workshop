@@ -1,7 +1,7 @@
-# 🛰️ Inetd configuration
+# 🛰️ Configuración de inetd
 
 ## Valor devuelto
-Se devuelve una tabla con las diferentes rutas IP.
+Se devuelve una tabla con las configuraciones del demonio inetd.
 
 *Campos*:
 - **SERVICE**: Nombre del servicio.

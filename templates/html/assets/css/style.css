@@ -7,7 +7,7 @@
 }
 
 body {
-	font-family: var(--font); 
+    font-family: var(--font);
     overflow-x: hidden;
     background-color: var(--body-background);
     min-height: 100vh;
@@ -47,8 +47,6 @@ nav::before {
     left: 100%;
 }
 
-
-
 main {
     overflow: auto;
     flex: 1;
@@ -78,6 +76,7 @@ main .copyright span {
     position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .sidebar-top .logo {

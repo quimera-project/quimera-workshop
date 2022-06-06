@@ -1,4 +1,4 @@
-# 📟 Task scheduler tools
+# 📟 Herramientas de programación de tareas
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintos software de tareas. 

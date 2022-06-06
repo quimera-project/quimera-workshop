@@ -1,7 +1,7 @@
-# 🛰️ Interfaces
+# 🛰️ Interfaces de red
 
 ## Valor devuelto
-Se devuelve una tabla con las diferentes rutas IP.
+Se devuelve una tabla con las diferentes interfaces IP.
 
 *Campos*:
 - **INTERFACE**: Interfaz de red.

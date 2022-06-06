@@ -1,4 +1,4 @@
-# 📟 Processes with write and execute permisions in some addresses
+# 📟 Procesos con permisos de escritura y ejecución en algunas zonas de memoria
 
 ## Valor devuelto
 Se devuelve una tabla con aquellos procesos en los que alguna dirección tiene permisos de escritura y ejecución a la vez.

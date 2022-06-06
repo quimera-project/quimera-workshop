@@ -1,4 +1,4 @@
-# 🛰️ IPv4 hosts
+# 🛰️ Hosts IPv4
 
 ## Valor devuelto
 Se devuelve una tabla con las diferentes IPs versión 4 y sus correspondientes alias.

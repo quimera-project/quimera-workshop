@@ -1,4 +1,4 @@
-# 💻 Not signed installed kernel modules
+# 💻 Módulos de kernel instalados sin firmar
 
 ## Valor devuelto
 Se devuelve una tabla con los módulos de kernel no firmados.

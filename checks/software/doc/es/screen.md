@@ -1,4 +1,4 @@
-# 🧪 Screen sessions
+# 🧪 Sesiones de screen
 
 ## Valor devuelto
 Se devuelve una lista de pares clave-valor con las diferentes sesiones abiertas de screen.

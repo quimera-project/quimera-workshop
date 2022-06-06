@@ -1,4 +1,4 @@
-# 🧪 Available containerization, orchestration and cloud programs
+# 🧪 Programas de contenerización, orquestación y cloud disponibles
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintos programas de contenerización, orquestación o cloud instalados que pueden ser interesantes para un atacante.

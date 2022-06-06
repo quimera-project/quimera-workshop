@@ -1,4 +1,4 @@
-# 👥 Password policy
+# 👥 Política de contraseñas
 
 ## Valor devuelto
 Se devuelve una lista con diferentes pares clave-valor de política de contraseñas.

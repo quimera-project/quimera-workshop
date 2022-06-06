@@ -1,4 +1,4 @@
-# 💻 Kernel exploits
+# 💻 Exploits del kernel
 
 ## Valor devuelto
 Se devuelve una tabla con los exploits disponibles para el kernel actual.

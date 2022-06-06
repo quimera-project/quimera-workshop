@@ -9,10 +9,6 @@ else
     perm="-2000"
 fi
 
-cat $FILES > /tmp/out
-
-echo "$JQ|$FILES|$JO" > /tmp/jaja
-
 body=$(find / -not \( -path /dev -prune \) -not \( -path /proc -prune \)  -not \( -path /mnt -prune \) -perm "$perm" -type f 2>/dev/null | while read file; do
     file=$(ls -lh "$file")
     perms=$(echo "$file" | awk '{print$1}')
@@ -21,25 +17,28 @@ body=$(find / -not \( -path /dev -prune \) -not \( -path /proc -prune \)  -not \
     group=$(echo "$file" | awk '{print$4}')
     size=$(echo "$file" | awk '{print$5}')
     date=$(echo "$file" | awk '{print $6, $7, $8}')
-    filename=$(echo "$file" | awk '{print$9}')
-    name=$($JO text="$filename" level="default")
+    path=$(echo "$file" | awk '{print$9}')
+    name=$($JO text="$path" level="default")
     description=$($JO text="No info available" level="missing")
-    if ! [ "$IAMROOT" ] && [ -O "$filename" ]; then
-        name=$($JO text="$filename" level="high")
+    if ! [ "$IAMROOT" ] && [ -O "$path" ]; then
+        name=$($JO text="$path" level="high")
         description=$($JO text="You own the "$id" file" level="high")
-    elif ! [ "$IAMROOT" ] && [ -w "$filename" ]; then
-        name=$($JO text="$filename" level="critical")
+    elif ! [ "$IAMROOT" ] && [ -w "$path" ]; then
+        name=$($JO text="$path" level="critical")
         description=$($JO text="You can write the "$id" file" level="critical")
     else
-        json=$($JQ ".sxid[] | select(.name | contains(\""$filename"\"))" $FILES 2>/dev/null)
+        filtered=$(echo "$path" | awk -F/ '{print $NF}' | sed -E  "s,^([a-zA-Z]+).*$,\1,")
+        json=$($JQ ".sxid[] | select(.name==\"$filtered\")" $FILES 2>/dev/null)
+        # $JQ ".sxid" $FILES >>/tmp/yolo
         if [ "$json" ]; then
             text=$(echo "$json" | $JQ -r ".text")
             level=$(echo "$json" | $JQ -r ".level")
         else
-            text="$filename"
+            text="$path"
+            level="default"
         fi
         description=$($JO text="$text" level="$level")
-        name=$($JO text="$filename" level="$level")
+        name=$($JO text="$path" level="$level")
     fi
     echo "[$name,\"$perms\",\"$links\",\"$user\",\"$group\",\"$size\",\"$date\",$description],"
 done )

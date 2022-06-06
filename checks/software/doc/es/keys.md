@@ -1,4 +1,4 @@
-# 🧪 Available keys programs
+# 🧪 Programas de claves disponibles
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintos programas instalados destinados a gestionar claves de usuarios que pueden ser interesantes para un atacante.

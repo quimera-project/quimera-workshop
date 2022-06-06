@@ -2,7 +2,7 @@ hostnames:
   title: Nombres de la máquina
 inetd:
   title: Configuración de inetd
-interfactitle:
+interfaces:
   title: Interfaces de red
 ipv4:
   title: Hosts IPv4

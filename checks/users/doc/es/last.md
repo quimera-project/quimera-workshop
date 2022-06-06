@@ -1,4 +1,4 @@
-# 👥 Last logged users
+# 👥 Último inicio de sesión de los usuarios
 
 ## Valor devuelto
 Se devuelve una tabla con los últimos usuarios que han entrado al sistema.

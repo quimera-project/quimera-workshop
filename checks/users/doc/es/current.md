@@ -1,4 +1,4 @@
-# 👥 Current logged users
+# 👥 Usuarios actualmente logueados
 
 ## Valor devuelto
 Se devuelve los usuarios actualmente conectados.

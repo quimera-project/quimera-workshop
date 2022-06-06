@@ -1,4 +1,4 @@
-# 👥 Users with a console
+# 👥 Usuarios con consola
 
 ## Valor devuelto
 Se devuelve una tabla con los usuarios que contengan una shell.

@@ -1,4 +1,4 @@
-# 👥 All users
+# 👥 Todos los usuarios
 
 ## Valor devuelto
 Se devuelve una tabla con los diferentes usuarios del sistema.

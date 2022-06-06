@@ -1,4 +1,4 @@
-# 🧪 Available shells
+# 🧪 Shells disponibles
 
 ## Valor devuelto
 Se devuelve una lista de verificaciones de distintas shells instaladas que pueden ser interesantes para un atacante.
