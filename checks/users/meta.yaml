@@ -7,8 +7,11 @@ all:
     bin: all
     os:
     - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
     tags:
+    - top
     - info
     type: table
 

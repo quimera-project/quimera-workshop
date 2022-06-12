@@ -9,6 +9,7 @@ sgid:
     os:
     - kali
     - endeavouros
+    - oracle-linux
     priority: 1
     tags:
     - exploitable
@@ -25,6 +26,7 @@ suid:
     os:
     - kali
     - endeavouros
+    - oracle-linux
     priority: 2
     tags:
     - exploitable
@@ -43,4 +45,6 @@ writable:
     priority: 3
     tags:
     - exploitable
+    - endeavouros
+    - oracle-linux
     type: list

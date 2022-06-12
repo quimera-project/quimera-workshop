@@ -27,15 +27,17 @@ body=$(find / -not \( -path /dev -prune \) -not \( -path /proc -prune \)  -not \
         name=$($JO text="$path" level="critical")
         description=$($JO text="You can write the "$id" file" level="critical")
     else
-        filtered=$(echo "$path" | awk -F/ '{print $NF}' | sed -E  "s,^([a-zA-Z]+).*$,\1,")
-        json=$($JQ ".sxid[] | select(.name==\"$filtered\")" $FILES 2>/dev/null)
-        # $JQ ".sxid" $FILES >>/tmp/yolo
+        # filtered=$(echo "$path" | awk -F/ '{print $NF}' | sed -E  "s,^([a-zA-Z]+).*$,\1,")
+        filtered=$(echo "$path" | awk -F/ '{print $NF}')
+        json=$(cat "$FILES" | $JQ ".sxid[] | select(.name==\"$filtered\")" 2>/dev/null)
+        text=""
+        level=""
         if [ "$json" ]; then
             text=$(echo "$json" | $JQ -r ".text")
             level=$(echo "$json" | $JQ -r ".level")
         else
-            text="$path"
-            level="default"
+            text="None"
+            level="missing"
         fi
         description=$($JO text="$text" level="$level")
         name=$($JO text="$path" level="$level")

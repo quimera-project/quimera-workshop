@@ -30,18 +30,18 @@ if [ "$(command -v aa-status 2>/dev/null)" ]; then
   if [ "$(aa-status --enabled >/dev/null)" ]; then
     $JO type="question" query="Is AppArmor enabled?" answer="$($JO text="Yes" level="info")"
   else
-    $JO type="question" query="Is AppArmor enabled?" answer=$($JO text="No" level="medium")
+    $JO type="question" query="Is AppArmor enabled?" answer="$($JO text="No" level="medium")"
   fi
 elif [ "$(command -v apparmor_status 2>/dev/null)" ]; then
   if [ "$(apparmor_status --enabled >/dev/null)" ]; then
     $JO type="question" query="Is AppArmor enabled?" answer="$($JO text="Yes" level="info")"
   else
-    $JO type="question" query="Is AppArmor enabled?" answer=$($JO text="No" level="medium")
+    $JO type="question" query="Is AppArmor enabled?" answer="$($JO text="No" level="medium")"
   fi
 elif [ "$(ls /etc/apparmor.d 2>/dev/null)" ]; then
     $JO type="question" query="Is AppArmor enabled?" answer="$($JO -a "Only profiles could be found" "$($JO text="/etc/apparmor.d" level="info")")"
 else
-  $JO type="question" query="Is AppArmor enabled?" answer=$($JO text="Couldn't be found" level="missing")
+  $JO type="question" query="Is AppArmor enabled?" answer="$($JO text="Couldn't be found" level="missing")"
 fi
 )
 

@@ -77,6 +77,8 @@ protections:
     bin: protections.sh
     os:
     - kali
+    - endeavouros
+    - oracle-linux
     priority: 1
     tags:
     - info

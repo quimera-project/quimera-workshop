@@ -1,7 +1,7 @@
 #!/bin/sh
 eval $IMPORTS
 
-body=$(last -Fiw 2>/dev/null | grep -v "^$" | head | while read line; do
+body=$(last -Fiw 2>/dev/null | grep -Ev "^$|^reboot" | head | while read line; do
     user=$(echo "$line" | awk '{print $1}')
     tty=$(echo "$line" | awk '{print $2}')
     ip=$(echo "$line" | awk '{print $3}')

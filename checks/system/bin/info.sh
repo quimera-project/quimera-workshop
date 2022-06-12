@@ -15,10 +15,10 @@ fi
 # ⋘ Kernel version ⋙
 kernel_version=$(uname -r 2>/dev/null || cat /proc/version 2>/dev/null | cut -d " " -f3)
 if [ "$kernel_version" ]; then
-    if [ $(echo $kernel_version | grep -E "$($JQ -r '.kernels.high' $SYSTEM)") ]; then
+    if [ $(echo $kernel_version | grep -E "$(cat "$SYSTEM" | $JQ -r '.kernels.high')") ]; then
         kernel_version=$($JO type=pair key="Kernel version" value="$($JO text="$kernel_version" level="high")")
     else
-        if [ $(echo $kernel_version | grep -E "$($JQ -r '.kernels.critical' $SYSTEM)") ]; then
+        if [ $(echo $kernel_version | grep -E "$(cat "$SYSTEM" | $JQ -r '.kernels.critical')") ]; then
             kernel_version=$($JO type=pair key="Kernel version" value="$($JO text="$kernel_version" level="critical")")
         else
             kernel_version=$($JO type=pair key="Kernel version" value="$kernel_version")
@@ -31,7 +31,7 @@ fi
 # ⋘ Sudo version ⋙
 sudo_version=$(sudo -V 2>/dev/null | head -1 | awk '{print$3}')
 if [ "$sudo_version" ]; then
-    if [ $(echo $sudo_version | grep -E "$($JQ -r '.sudo.high' $SYSTEM)") ]; then
+    if [ $(echo $sudo_version | grep -E "$(cat "$SYSTEM" | $JQ -r '.sudo.high')") ]; then
         sudo_version=$($JO type=pair key="Sudo version" value="$($JO text="$sudo_version" level="high")")
     else
         sudo_version=$($JO type=pair key="Sudo version" value="$sudo_version")

@@ -7,7 +7,7 @@ body=$(netstat -punta 2>/dev/null | grep -i listen | while read line; do
     foreign_address=$(echo "$line" | awk '{print $5}')
     state=$(echo "$line" | awk '{print $6}')
     pid=$(echo "$line" | awk '{print $7}')
-    if [ $(echo "$local_address" | grep -E "$($JQ -r '.high_active_ports' $NETWORK)") ]; then
+    if [ $(echo "$local_address" | grep -E "$(cat "$NETWORK" | $JQ -r '.high_active_ports')") ]; then
         level="high"
     else
         level="default"

@@ -1,7 +1,7 @@
 #!/bin/sh
 eval $IMPORTS
 
-list=$(for json in $($JQ -r ".writable[]" $FILES); do
+list=$(for json in $(cat "FILES" | $JQ -r ".writable[]"); do
     name=$(echo "$json" | $JQ -r ".name")
     if [ -w "$name" ]; then
         key=$($JO text="$name" level="$(echo "$json" | $JQ -r ".level")")

@@ -14,6 +14,10 @@ La información se obtiene del archivo `/etc/passwd` y del comando `id`.
 ## ¿De qué sirve esta información para escalar privilegios?
 Es interesante tener una vista general de todos los usuarios del sistema, cuales son los grupos de cada uno y cómo dichos grupos están relacionados. A su vez, puede ser relevante observar qué grupos son vulnerables a escalada de privilegios y qué usuarios contienen privilegios de root.
 
+# ¿Qué grupos son interesantes para escalar privilegios?
+Puedes echarle un vistazo al siguiente enlace:
+- [Interesting Groups](https://book.hacktricks.xyz/linux-hardening/privilege-escalation/interesting-groups-linux-pe)
+
 ## Ver también
 - [Current logged users](current)
 - [Last logged users](last)
