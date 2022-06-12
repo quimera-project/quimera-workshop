@@ -79,7 +79,7 @@ protections:
     - kali
     - endeavouros
     - oracle-linux
-    priority: 1
+    priority: 3
     tags:
     - info
     type: list

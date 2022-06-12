@@ -10,7 +10,7 @@ sgid:
     - kali
     - endeavouros
     - oracle-linux
-    priority: 1
+    priority: 2
     tags:
     - exploitable
     type: table

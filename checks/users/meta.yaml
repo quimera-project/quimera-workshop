@@ -9,7 +9,7 @@ all:
     - kali
     - endeavouros
     - oracle-linux
-    priority: 1
+    priority: 3
     tags:
     - top
     - info

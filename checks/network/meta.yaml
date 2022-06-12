@@ -42,7 +42,7 @@ ipv4:
     - kali
     - endeavouros
     - oracle-linux
-    priority: 1
+    priority: 2
     tags:
     - info
     - configs
@@ -56,7 +56,7 @@ ipv6:
     - kali
     - endeavouros
     - oracle-linux
-    priority: 1
+    priority: 2
     tags:
     - info
     - configs
