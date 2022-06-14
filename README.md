@@ -28,6 +28,7 @@
   </p>
 </p>
 
+> 🚧 Este proyecto proviene de un Trabajo Fin de Grado de Ingeniería de la Ciberseguridad. Se encuentra en una fase muy temprana del desarrollo y sufrirá diferentes cambios hasta llegar a una versión estable final.
 
 ## Instalación
 > Quimera Workshop se instala automáticamente cuando Quimera Core no detecta el repositorio en el sistema.
